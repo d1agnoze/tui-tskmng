@@ -1,0 +1,38 @@
+root = "."
+testdata_dir = "testdata"
+tmp_dir = "bin/tmp"
+
+[build]
+  args_bin = []
+  bin = "/usr/bin/true"
+  cmd = "make build"
+  delay = 1000
+  exclude_dir = ["assets", "bin", "vendor", "testdata", "test"]
+  exclude_file = []
+  exclude_regex = ["_test.go"]
+  exclude_unchanged = false
+  follow_symlink = true
+  full_bin = ""
+  include_dir = []
+  include_ext = ["go", "tpl", "html"]
+  include_file = [".air.toml"]
+  kill_delay = "0s"
+  log = "bin/tmp/build-errors.log"
+  rerun = false
+  rerun_delay = 500
+  send_interrupt = true
+  stop_on_error = false
+
+[color]
+  app = "green"
+  build = "yellow"
+  main = "magenta"
+  runner = "green"
+  watcher = "cyan"
+
+[misc]
+  clean_on_exit = true
+
+[screen]
+  clear_on_rebuild = false
+  keep_scroll = false
